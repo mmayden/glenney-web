@@ -1,13 +1,13 @@
 package main
 
 import (
-    "fmt"
-    "math/rand"
-    "time"
-    "strconv"
+	"fmt"
+	"math/rand"
+	"strconv"
+	"time"
 )
 
-func main() {   
-    rand.Seed(time.Now().UnixNano())
-    fmt.Print("\n\n" + strconv.Itoa(rand.Intn(10) + 1) + "\n\n")
+func main() {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	fmt.Print("\n\n" + strconv.Itoa(r.Intn(10)+1) + "\n\n")
 }
